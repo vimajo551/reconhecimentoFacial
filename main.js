@@ -11,7 +11,20 @@ function takeSnapshot(){
         document.getElementById("result").innerHTML ='<img id="pokebola" src="'+data_uri+'"/>'
     })
 }
-classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/EspL6NkI0/model.json',modelLoaded)
+classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/bVRB8tfXf/model.json',modelLoaded)
 function modelLoaded(){
     console.log("carregado")
+}
+function check(){
+    getimg = document.getElementById("pokebola")
+    classifier.classify(getimg,gotResult)
+}
+function gotResult(error,results){
+    if(error){
+        console.error(error)
+    }
+    else{
+        document.getElementById("resultObjectName").innerHTML = results[0].label;
+        document.getElementById("resultObjectAccuracy").innerHTML = results[0].confidence.toFixed(3);
+    }
 }

@@ -1,7 +1,7 @@
   body
   {
     color: white;
-    background: #BA55D3;
+    background: #B0C4DE;
   }
   .heading
   {
@@ -16,7 +16,7 @@
   }
   .nameOfObjects, #resultObjectName  , #resultObjectAccuracy
   {
-    color: 	orange;
+    color: 	yellow;
     font-family: 'Permanent Marker', cursive;
     font-size: 30;
   }
