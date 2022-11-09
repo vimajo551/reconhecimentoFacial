@@ -11,7 +11,7 @@ function takeSnapshot(){
         document.getElementById("result").innerHTML ='<img id="pokebola" src="'+data_uri+'"/>'
     })
 }
-classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/bVRB8tfXf/model.json',modelLoaded)
+classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/pdR5L9e0P/',modelLoaded)
 function modelLoaded(){
     console.log("carregado")
 }
